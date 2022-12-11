@@ -42,6 +42,7 @@
                     <th class="text-center">Direccion</th>
                     <th class="text-center">Celular</th>
                     <th class="text-center">Sexo</th>
+                    <th class= "text-center">Online/Offline</th>
                   
                     <th class="text-center">Creacion</th>
                     <th class="text-center">Fecha de Ingreso</th>
@@ -61,6 +62,15 @@
                         <td>{{$p->address}}</td>
                         <td>{{$p->phone}}</td>
                         <td>{{$p->sexo}}</td>
+
+                        <td> 
+                            @if($p->isUserOnline())
+                                <label class= "py-2 px-3 badge btn-success"> Online</label>
+                            
+                            @else
+                                <label class= "py-2 px-3 badge btn-warning"> Offline</label>       
+                            @endif
+                        </td>
                        
                         <!-- <td>
                         @if($p->banned_until )

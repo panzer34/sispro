@@ -56,7 +56,7 @@
 
                     
 
-                        
+                        @include('layouts.partials.profile')
 
 
                         <div class="topbar-divider d-none d-sm-block"></div>
