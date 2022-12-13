@@ -74,6 +74,6 @@ Route::resource('/horarios', App\Http\Controllers\HorarioController::class);
 });
 
 
-
+Route::resource('/profiles', App\Http\Controllers\ProfileController::class);
 
 

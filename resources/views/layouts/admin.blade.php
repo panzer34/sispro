@@ -56,7 +56,7 @@
 
                     
 
-                        @include('layouts.partials.profile')
+                        
 
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -77,7 +77,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{route('profiles.index')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
@@ -141,6 +141,9 @@
         </div>
     </div>
 
+<div class= "container-fluid">
+    @yield('profiles')
+</div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('libs/jquery/jquery.min.js')}}"></script>
