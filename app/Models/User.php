@@ -29,7 +29,8 @@ class User extends Authenticatable
         'address',
         'phone',
         'role',
-        'status'
+        'status',
+        'imagen'
        
         
     ];
@@ -74,4 +75,6 @@ class User extends Authenticatable
     public function isUserOnline(){
         return Cache::has('user-is-online' . $this->id);
     }
+
+  
 }

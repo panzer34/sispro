@@ -74,6 +74,7 @@ Route::resource('/horarios', App\Http\Controllers\HorarioController::class);
 });
 
 
-Route::resource('/profiles', App\Http\Controllers\ProfileController::class);
+Route::get('/profiles', 'App\Http\Controllers\ProfileController@index')->name('profiles.index');
+Route::put('/profiles', 'App\Http\Controllers\ProfileController@update')->name('profiles.update');
 
 

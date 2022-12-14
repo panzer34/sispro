@@ -71,7 +71,7 @@
                                 @endauth
                                 </span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{asset('img/undraw_profile.svg')}}">
+                                    src="{{asset('imagenes/'.Auth::user()->imagen)}}">
                                 
                             </a>
                             <!-- Dropdown - User Information -->
