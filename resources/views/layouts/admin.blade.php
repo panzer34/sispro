@@ -141,9 +141,7 @@
         </div>
     </div>
 
-<div class= "container-fluid">
-    @yield('profiles')
-</div>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('libs/jquery/jquery.min.js')}}"></script>
