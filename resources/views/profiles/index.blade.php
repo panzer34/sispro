@@ -45,7 +45,7 @@
             <div class="card shadow mb-4">
                 <div class="card-profile-image mt-4 ">
                     
-                    <img src=" {{asset('imagenes/'.Auth::user()->imagen)}}" alt="{{Auth::user()->imagen}}" style="height: 300px; width: 335px;" class="rounded-circle"/>
+                    <img src=" {{asset('imagenes/'.Auth::user()->imagen)}}" alt="{{Auth::user()->imagen}}" style="height: 300px; width: 335px;" class="rounded-circle" id="output"/>
                     
                 </div>
                 <div class="card-body">
@@ -98,14 +98,15 @@
             </div>
 
         </div>
-
+        
         <div class="col-lg-8 order-lg-1">
-
+        
             <div class="card shadow mb-4">
 
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Mi Cuenta</h6>
                 </div>
+                
 
                 <div class="card-body">
 
@@ -113,7 +114,7 @@
                     @method('PUT')
                     {{csrf_field()}}
 
-                        
+                   
 
                         <h6 class="heading-small text-muted mb-4">Informacion del Usuario</h6>
 
@@ -166,13 +167,13 @@
                             <div class="row">
                                 
                                 <div class="col-lg-6">
-                                    <label for="exampleFormControlFile1">Example file input</label>
+                                    <label for="imagen">Example file input</label>
                                    
-                                    <input type="file" class="form-control-file" name="imagen" id="exampleFormControlFile1" value="{{ Auth::user()->imagen}}">
+                                    <input type="file" class="form-control-file" name="imagen" id="image" value="{{ Auth::user()->imagen}}" onchange="loadFile(event)">
                                     
                                 </div>
                                
-
+                                
                             </div>
 
                         </div>
@@ -198,3 +199,17 @@
 
 
 @endsection
+
+@push('scripts')
+
+    <script>
+        var loadFile = function(event){
+          
+
+           var output = document.getElementById('output');
+           output.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+
+
+@endpush
